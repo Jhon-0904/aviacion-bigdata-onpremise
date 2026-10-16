@@ -1,0 +1,55 @@
+VERIFICACION HDFS Y YARN
+Thu Oct 15 06:04:41 PM UTC 2026
+
+Procesos Java:
+94849 DataNode
+95296 ResourceManager
+95080 SecondaryNameNode
+95642 NodeManager
+94669 NameNode
+96412 Jps
+
+Reporte HDFS:
+2026-10-15 18:04:42,069 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Configured Capacity: 40342192128 (37.57 GB)
+Present Capacity: 20518531072 (19.11 GB)
+DFS Remaining: 20518506496 (19.11 GB)
+DFS Used: 24576 (24 KB)
+DFS Used%: 0.00%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (1):
+
+Name: 127.0.0.1:9866 (localhost)
+Hostname: jdmax
+Decommission Status : Normal
+Configured Capacity: 40342192128 (37.57 GB)
+DFS Used: 24576 (24 KB)
+Non DFS Used: 17741402112 (16.52 GB)
+DFS Remaining: 20518506496 (19.11 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 50.86%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Thu Oct 15 18:04:41 UTC 2026
+Last Block Report: Thu Oct 15 17:59:59 UTC 2026
+Num of Blocks: 0
+
+

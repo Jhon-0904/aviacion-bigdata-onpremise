@@ -1,0 +1,63 @@
+MODELO DEFINITIVO LATAM
+Fecha:
+Fri Oct 16 04:12:14 PM UTC 2026
+
+Modelo seleccionado: GBTClassifier
+Umbral seleccionado: 0.50
+
+Métricas de todos los modelos y umbrales:
+modelo,umbral,roc_auc,pr_auc,tn,fp,fn,tp,precision,recall,f1,alertas,alertas_por_1000
+logistic_regression,0.3,0.7108754060962722,0.528721779911512,40523,78659,6405,49816,0.3877485892196926,0.8860745984596503,0.5394377788365747,128475,732.4561153458037
+logistic_regression,0.4,0.7108754060962722,0.528721779911512,71234,47948,16452,39769,0.4533784785161371,0.7073691325305491,0.5525851408245216,87717,500.088367929853
+logistic_regression,0.5,0.7108754060962722,0.528721779911512,94488,24694,28855,27366,0.5256626968882059,0.4867576172604543,0.5054626388747796,52060,296.8022211706755
+logistic_regression,0.6,0.7108754060962722,0.528721779911512,108247,10935,39550,16671,0.6038904585959574,0.29652620906778604,0.3977477423741754,27606,157.38613364651687
+random_forest,0.3,0.7114629627943252,0.5175282633466612,40765,78417,6158,50063,0.3896559775840598,0.8904679746002383,0.5420977688263734,128480,732.4846211296272
+random_forest,0.4,0.7114629627943252,0.5175282633466612,77182,42000,18838,37383,0.4709194663844904,0.6649294747514274,0.5513554172443291,79383,452.5749274527802
+random_forest,0.5,0.7114629627943252,0.5175282633466612,99154,20028,32248,23973,0.5448285266243948,0.426406502908166,0.478397956536489,44001,250.85659880389733
+random_forest,0.6,0.7114629627943252,0.5175282633466612,107273,11909,39387,16834,0.5856730334342275,0.2994254815816154,0.39626194623605293,28743,163.86834888798938
+gbt_classifier,0.3,0.7082917438572005,0.5112151432134311,53109,66073,9933,46288,0.4119578857432739,0.8233222461357855,0.5491452230961787,112361,640.587675239306
+gbt_classifier,0.4,0.7082917438572005,0.5112151432134311,73703,45479,17564,38657,0.45945849576875536,0.6875900464239341,0.5508382196826663,84136,479.6725255554352
+gbt_classifier,0.5,0.7082917438572005,0.5112151432134311,89198,29984,25544,30677,0.5057120720067259,0.5456502018818591,0.5249225714823498,60661,345.8378705039252
+gbt_classifier,0.6,0.7082917438572005,0.5112151432134311,99582,19600,32531,23690,0.5472395472395473,0.42137279664182425,0.47612826722673873,43290,246.80307634419023
+
+Ubicación del modelo:
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/metadata
+-rw-r--r--   1 max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/metadata/_SUCCESS
+-rw-r--r--   1 max supergroup        354 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/metadata/part-00000-933912d3-d7ee-46c9-b0da-3dc043f6343b-c000.txt
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/0_StringIndexer_e33b41b83cf1
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/0_StringIndexer_e33b41b83cf1/data
+-rw-r--r--   1 max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/0_StringIndexer_e33b41b83cf1/data/_SUCCESS
+-rw-r--r--   1 max supergroup        759 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/0_StringIndexer_e33b41b83cf1/data/part-00000-8db7d8a3-29c6-4bd2-a1ad-155e8f0aba92-c000.snappy.parquet
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/0_StringIndexer_e33b41b83cf1/metadata
+-rw-r--r--   1 max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/0_StringIndexer_e33b41b83cf1/metadata/_SUCCESS
+-rw-r--r--   1 max supergroup        353 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/0_StringIndexer_e33b41b83cf1/metadata/part-00000-42866b44-ae04-4060-a367-d9749fd42c5e-c000.txt
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/1_StringIndexer_61c3706b7bd9
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/1_StringIndexer_61c3706b7bd9/data
+-rw-r--r--   1 max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/1_StringIndexer_61c3706b7bd9/data/_SUCCESS
+-rw-r--r--   1 max supergroup       2068 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/1_StringIndexer_61c3706b7bd9/data/part-00000-546c2db2-923f-4af7-9e40-e76227671a1e-c000.snappy.parquet
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/1_StringIndexer_61c3706b7bd9/metadata
+-rw-r--r--   1 max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/1_StringIndexer_61c3706b7bd9/metadata/_SUCCESS
+-rw-r--r--   1 max supergroup        349 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/1_StringIndexer_61c3706b7bd9/metadata/part-00000-67a17a22-b241-4748-b662-7a161d802395-c000.txt
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/2_StringIndexer_ff96fc86ce55
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/2_StringIndexer_ff96fc86ce55/data
+-rw-r--r--   1 max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/2_StringIndexer_ff96fc86ce55/data/_SUCCESS
+-rw-r--r--   1 max supergroup        767 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/2_StringIndexer_ff96fc86ce55/data/part-00000-14045206-bb29-4bb4-b490-c6db88561b5a-c000.snappy.parquet
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/2_StringIndexer_ff96fc86ce55/metadata
+-rw-r--r--   1 max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/2_StringIndexer_ff96fc86ce55/metadata/_SUCCESS
+-rw-r--r--   1 max supergroup        375 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/2_StringIndexer_ff96fc86ce55/metadata/part-00000-8bbb7e59-36a2-419d-8169-828aa199fa27-c000.txt
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/3_OneHotEncoder_b3209c7642e5
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/3_OneHotEncoder_b3209c7642e5/data
+-rw-r--r--   1 max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/3_OneHotEncoder_b3209c7642e5/data/_SUCCESS
+-rw-r--r--   1 max supergroup        616 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/3_OneHotEncoder_b3209c7642e5/data/part-00000-04a4f26f-be83-4ec7-8576-70b9ac4c15b8-c000.snappy.parquet
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/3_OneHotEncoder_b3209c7642e5/metadata
+-rw-r--r--   1 max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/3_OneHotEncoder_b3209c7642e5/metadata/_SUCCESS
+-rw-r--r--   1 max supergroup        419 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/3_OneHotEncoder_b3209c7642e5/metadata/part-00000-1ece9850-9ff8-4e10-a790-edcfcceeb943-c000.txt
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/4_VectorAssembler_f80debd1da17
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/4_VectorAssembler_f80debd1da17/metadata
+-rw-r--r--   1 max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/4_VectorAssembler_f80debd1da17/metadata/_SUCCESS
+-rw-r--r--   1 max supergroup       1365 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/4_VectorAssembler_f80debd1da17/metadata/part-00000-db4106ce-3f48-4dfb-9a78-4e542f546eff-c000.txt
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/5_GBTClassifier_fd8d63c60d82
+drwxr-xr-x   - max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/5_GBTClassifier_fd8d63c60d82/data
+-rw-r--r--   1 max supergroup          0 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/5_GBTClassifier_fd8d63c60d82/data/_SUCCESS
+-rw-r--r--   1 max supergroup     506689 2026-10-16 16:06 /proyecto_latam/outputs/modelos/modelo_definitivo/stages/5_GBTClassifier_fd8d63c60d82/data/part-00000-6034fe07-0ce3-481e-87a9-dac57fc3b3ba-c000.snappy.parquet

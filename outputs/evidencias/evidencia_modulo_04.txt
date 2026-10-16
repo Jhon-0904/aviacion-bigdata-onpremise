@@ -1,0 +1,18 @@
+EVIDENCIA DEL MODULO 04
+Fri Oct 16 03:08:47 AM UTC 2026
+
+Registros BTS iniciales: 4120343
+Vuelos elegibles después de la limpieza: 4014659
+Vuelos con estación NOAA asignada: 1149291
+Columnas generadas: 33
+Registros finales: 1149291
+scheduled_dep_local: OK
+scheduled_dep_utc: OK
+alert_time_utc: OK
+delay_target: OK
+origin_station: OK
+origin_time_zone: OK
+ZONA STAGING GENERADA:
+
+0       0       /proyecto_latam/staging/bts_preparado/_SUCCESS
+28.6 M  28.6 M  /proyecto_latam/staging/bts_preparado/scheduled_year=2026

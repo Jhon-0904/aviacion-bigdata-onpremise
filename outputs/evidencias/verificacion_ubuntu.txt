@@ -1,0 +1,41 @@
+VERIFICACION DE UBUNTU ON-PREMISE
+Thu Oct 15 05:35:34 PM UTC 2026
+
+Arquitectura:
+aarch64
+
+Sistema:
+Distributor ID:	Ubuntu
+Description:	Ubuntu 26.04.1 LTS
+Release:	26.04
+Codename:	resolute
+
+Java:
+openjdk version "17.0.20.1" 2026-08-18
+OpenJDK Runtime Environment (build 17.0.20.1+1-1-26.04-Ubuntu)
+OpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-26.04-Ubuntu, mixed mode, sharing)
+
+Python:
+Python 3.14.4
+
+SSH:
+active
+
+Red:
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp0s1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether f2:14:df:f3:90:87 brd ff:ff:ff:ff:ff:ff
+    altname enxf214dff39087
+    inet 192.168.64.5/24 brd 192.168.64.255 scope global dynamic noprefixroute enp0s1
+       valid_lft 2160sec preferred_lft 2160sec
+    inet6 fd20:fe9a:d4a8:6926:ecf1:c0c9:1540:be92/64 scope global temporary dynamic 
+       valid_lft 603362sec preferred_lft 84624sec
+    inet6 fd20:fe9a:d4a8:6926:f014:dfff:fef3:9087/64 scope global dynamic mngtmpaddr proto kernel_ra 
+       valid_lft 2591998sec preferred_lft 604798sec
+    inet6 fe80::f014:dfff:fef3:9087/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever

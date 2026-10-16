@@ -1,0 +1,9 @@
+ESTRUCTURA DEL DATA LAKE EN HDFS
+Thu Oct 15 06:06:42 PM UTC 2026
+
+drwxr-xr-x   - max supergroup          0 2026-10-15 18:05 /proyecto_latam/outputs
+drwxr-xr-x   - max supergroup          0 2026-10-15 18:05 /proyecto_latam/processed
+drwxr-xr-x   - max supergroup          0 2026-10-15 18:05 /proyecto_latam/raw
+drwxr-xr-x   - max supergroup          0 2026-10-15 18:05 /proyecto_latam/raw/bts
+drwxr-xr-x   - max supergroup          0 2026-10-15 18:05 /proyecto_latam/raw/noaa
+drwxr-xr-x   - max supergroup          0 2026-10-15 18:05 /proyecto_latam/staging

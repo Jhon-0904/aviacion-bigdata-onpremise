@@ -1,0 +1,27 @@
+# Datos grandes
+datos/raw/
+datos/staging/
+datos/processed/
+hdfs/
+bts_csv/
+noaa_2026_01_07/
+snap/
+
+*.csv
+*.psv
+*.zip
+*.parquet
+
+# Entornos virtuales
+venv-jupyter/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Modelos y archivos temporales
+outputs/modelos/
+*.log
+.env
+*.key
+*.pem

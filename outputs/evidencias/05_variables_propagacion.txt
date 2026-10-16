@@ -1,0 +1,857 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/10/16 03:21:49 INFO SparkContext: Running Spark version 4.0.4
+26/10/16 03:21:49 INFO SparkContext: OS info Linux, 6.8.0-147-generic, aarch64
+26/10/16 03:21:49 INFO SparkContext: Java version 17.0.20.1
+26/10/16 03:21:49 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/16 03:21:49 INFO ResourceUtils: ==============================================================
+26/10/16 03:21:49 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/16 03:21:49 INFO ResourceUtils: ==============================================================
+26/10/16 03:21:49 INFO SparkContext: Submitted application: 05_VariablesPropagacion
+26/10/16 03:21:49 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/16 03:21:49 INFO ResourceProfile: Limiting resource is cpus at 1 tasks per executor
+26/10/16 03:21:49 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/16 03:21:49 INFO SecurityManager: Changing view acls to: max
+26/10/16 03:21:49 INFO SecurityManager: Changing modify acls to: max
+26/10/16 03:21:49 INFO SecurityManager: Changing view acls groups to: max
+26/10/16 03:21:49 INFO SecurityManager: Changing modify acls groups to: max
+26/10/16 03:21:49 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: max groups with view permissions: EMPTY; users with modify permissions: max; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/16 03:21:50 INFO Utils: Successfully started service 'sparkDriver' on port 43143.
+26/10/16 03:21:50 INFO SparkEnv: Registering MapOutputTracker
+26/10/16 03:21:50 INFO SparkEnv: Registering BlockManagerMaster
+26/10/16 03:21:50 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/16 03:21:50 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/16 03:21:50 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/16 03:21:50 INFO DiskBlockManager: Created local directory at /var/lib/spark-local/blockmgr-008729e6-1514-4a50-a883-196ee3f99856
+26/10/16 03:21:50 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/16 03:21:50 INFO JettyUtils: Start Jetty 192.168.64.5:4040 for SparkUI
+26/10/16 03:21:50 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/16 03:21:50 INFO SecurityManager: Changing view acls to: max
+26/10/16 03:21:50 INFO SecurityManager: Changing modify acls to: max
+26/10/16 03:21:50 INFO SecurityManager: Changing view acls groups to: max
+26/10/16 03:21:50 INFO SecurityManager: Changing modify acls groups to: max
+26/10/16 03:21:50 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: max groups with view permissions: EMPTY; users with modify permissions: max; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/16 03:21:50 INFO DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at localhost/127.0.0.1:8032
+26/10/16 03:21:50 INFO Configuration: resource-types.xml not found
+26/10/16 03:21:50 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+26/10/16 03:21:50 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+26/10/16 03:21:50 INFO Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+26/10/16 03:21:50 INFO Client: Setting up container launch context for our AM
+26/10/16 03:21:50 INFO Client: Setting up the launch environment for our AM container
+26/10/16 03:21:50 INFO Client: Preparing resources for our AM container
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/HikariCP-2.5.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/JLargeArrays-1.5.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/JTransforms-3.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/RoaringBitmap-1.3.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/ST4-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/aircompressor-2.0.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/algebra_2.13-2.8.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/annotations-17.0.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/antlr-runtime-3.5.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/antlr4-runtime-4.13.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/aopalliance-repackaged-3.0.6.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/arpack-3.0.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/arpack_combined_all-0.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/arrow-format-18.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/arrow-memory-core-18.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/arrow-memory-netty-18.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/arrow-memory-netty-buffer-patch-18.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/arrow-vector-18.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/audience-annotations-0.12.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/avro-1.12.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/avro-ipc-1.12.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/avro-mapred-1.12.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/bcprov-jdk18on-1.80.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/blas-3.0.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/breeze-macros_2.13-2.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/breeze_2.13-2.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/cats-kernel_2.13-2.8.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/checker-qual-3.43.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/chill-java-0.10.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/chill_2.13-0.10.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/commons-cli-1.9.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/commons-codec-1.17.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/commons-collections-3.2.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/commons-collections4-4.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/commons-compiler-3.1.9.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/commons-compress-1.27.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/commons-crypto-1.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/commons-dbcp-1.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/commons-io-2.18.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/commons-lang-2.6.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/commons-lang3-3.17.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/commons-math3-3.6.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/commons-pool-1.5.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/commons-text-1.13.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/compress-lzf-1.1.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/curator-client-5.7.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/curator-framework-5.7.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/curator-recipes-5.7.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/datanucleus-api-jdo-4.2.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/datanucleus-core-4.1.17.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/datanucleus-rdbms-4.1.19.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/datasketches-java-6.1.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/datasketches-memory-3.0.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/derby-10.16.1.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/derbyshared-10.16.1.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/derbytools-10.16.1.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/dropwizard-metrics-hadoop-metrics2-reporter-0.1.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/error_prone_annotations-2.36.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/failureaccess-1.0.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/flatbuffers-java-24.3.25.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/gson-2.11.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/guava-33.4.0-jre.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hadoop-client-api-3.4.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hadoop-client-runtime-3.4.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hive-beeline-2.3.10.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hive-cli-2.3.10.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hive-common-2.3.10.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hive-exec-2.3.10-core.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hive-jdbc-2.3.10.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hive-metastore-2.3.10.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hive-serde-2.3.10.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hive-service-rpc-4.0.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hive-shims-0.23-2.3.10.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hive-shims-2.3.10.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hive-shims-common-2.3.10.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hive-shims-scheduler-2.3.10.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hive-storage-api-2.8.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hk2-api-3.0.6.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hk2-locator-3.0.6.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/hk2-utils-3.0.6.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/httpclient-4.5.14.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/httpcore-4.4.16.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/icu4j-76.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/istack-commons-runtime-4.1.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/ivy-2.5.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/j2objc-annotations-3.0.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jackson-annotations-2.18.6.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jackson-core-2.18.6.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jackson-databind-2.18.6.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jackson-dataformat-yaml-2.18.6.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jackson-datatype-jsr310-2.18.6.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jackson-module-scala_2.13-2.18.6.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jakarta.activation-api-2.1.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jakarta.annotation-api-2.1.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jakarta.inject-api-2.0.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jakarta.servlet-api-5.0.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jakarta.validation-api-3.0.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jakarta.ws.rs-api-3.0.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jakarta.xml.bind-api-4.0.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/janino-3.1.9.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/java-diff-utils-4.15.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/javassist-3.30.2-GA.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/javax.jdo-3.2.0-m3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/javax.servlet-api-4.0.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/javolution-5.5.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jaxb-core-4.0.5.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jaxb-runtime-4.0.5.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jcl-over-slf4j-2.0.16.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jdo-api-3.0.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jersey-client-3.0.18.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jersey-common-3.0.18.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jersey-container-servlet-3.0.18.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jersey-container-servlet-core-3.0.18.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jersey-hk2-3.0.18.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jersey-server-3.0.18.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jjwt-api-0.12.6.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jjwt-impl-0.12.6.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jjwt-jackson-0.12.6.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jline-2.14.6.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jline-3.27.1-jdk8.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/joda-time-2.13.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jodd-core-3.5.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jpam-1.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/json-1.8.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/json4s-ast_2.13-4.0.7.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/json4s-core_2.13-4.0.7.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/json4s-jackson-core_2.13-4.0.7.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/json4s-jackson_2.13-4.0.7.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/json4s-scalap_2.13-4.0.7.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jsr305-3.0.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jta-1.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/jul-to-slf4j-2.0.16.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kryo-shaded-4.0.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-client-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-client-api-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-httpclient-vertx-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-admissionregistration-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-apiextensions-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-apps-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-autoscaling-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-batch-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-certificates-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-common-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-coordination-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-core-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-discovery-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-events-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-extensions-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-flowcontrol-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-gatewayapi-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-metrics-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-networking-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-node-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-policy-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-rbac-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-resource-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-scheduling-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/kubernetes-model-storageclass-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/lapack-3.0.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/leveldbjni-all-1.8.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/libfb303-0.9.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/libthrift-0.16.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/log4j-1.2-api-2.24.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/log4j-api-2.24.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/log4j-core-2.24.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/log4j-layout-template-json-2.24.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/log4j-slf4j2-impl-2.24.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/lz4-java-1.8.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/metrics-core-4.2.30.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/metrics-graphite-4.2.30.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/metrics-jmx-4.2.30.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/metrics-json-4.2.30.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/metrics-jvm-4.2.30.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/minlog-1.3.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-all-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-buffer-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-codec-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-codec-dns-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-codec-http-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-codec-http2-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-codec-socks-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-common-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-handler-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-handler-proxy-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-resolver-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-resolver-dns-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-tcnative-boringssl-static-2.0.70.Final-linux-aarch_64.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-tcnative-boringssl-static-2.0.70.Final-linux-x86_64.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-tcnative-boringssl-static-2.0.70.Final-osx-aarch_64.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-tcnative-boringssl-static-2.0.70.Final-osx-x86_64.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-tcnative-boringssl-static-2.0.70.Final-windows-x86_64.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-tcnative-classes-2.0.70.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-transport-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-transport-classes-epoll-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-transport-classes-kqueue-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-transport-native-epoll-4.1.118.Final-linux-aarch_64.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-transport-native-epoll-4.1.118.Final-linux-riscv64.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-transport-native-epoll-4.1.118.Final-linux-x86_64.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-transport-native-kqueue-4.1.118.Final-osx-aarch_64.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-transport-native-kqueue-4.1.118.Final-osx-x86_64.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/netty-transport-native-unix-common-4.1.118.Final.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/objenesis-3.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/opencsv-2.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/orc-core-2.1.4-shaded-protobuf.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/orc-format-1.1.1-shaded-protobuf.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/orc-mapreduce-2.1.4-shaded-protobuf.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/orc-shims-2.1.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/oro-2.0.8.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/osgi-resource-locator-1.0.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/paranamer-2.8.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/parquet-column-1.15.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/parquet-common-1.15.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/parquet-encoding-1.15.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/parquet-format-structures-1.15.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/parquet-hadoop-1.15.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/parquet-jackson-1.15.2.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/pickle-1.5.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/py4j-0.10.9.9.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/rocksdbjni-9.8.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/scala-collection-compat_2.13-2.7.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/scala-compiler-2.13.16.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/scala-library-2.13.16.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/scala-parallel-collections_2.13-1.2.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/scala-parser-combinators_2.13-2.4.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/scala-reflect-2.13.16.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/scala-xml_2.13-2.3.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/slf4j-api-2.0.16.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/snakeyaml-2.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/snakeyaml-engine-2.9.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/snappy-java-1.1.10.7.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-catalyst_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-common-utils_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-connect_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-core_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-graphx_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-hive-thriftserver_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-hive_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-kubernetes_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-kvstore_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-launcher_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-mllib-local_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-mllib_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-network-common_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-network-shuffle_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-repl_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-sketch_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-sql-api_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-sql_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-streaming_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-tags_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-unsafe_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-variant_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spark-yarn_2.13-4.0.4.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spire-macros_2.13-0.18.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spire-platform_2.13-0.18.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spire-util_2.13-0.18.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/spire_2.13-0.18.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/stax-api-1.0.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/stream-2.9.8.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/super-csv-2.2.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/threeten-extra-1.8.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/tink-1.16.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/transaction-api-1.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/univocity-parsers-2.9.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/vertx-auth-common-4.5.12.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/vertx-core-4.5.12.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/vertx-web-client-4.5.12.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/vertx-web-common-4.5.12.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/xbean-asm9-shaded-4.26.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/xmlschema-core-2.3.1.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/xz-1.10.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/zjsonpatch-7.1.0.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/zookeeper-3.9.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/zookeeper-jute-3.9.3.jar
+26/10/16 03:21:50 INFO Client: Source and destination file systems are the same. Not copying hdfs://localhost:9000/proyecto_latam/system/spark-jars/zstd-jni-1.5.6-9.jar
+26/10/16 03:21:50 INFO Client: Uploading resource file:/opt/spark-4.0.4-bin-hadoop3/python/lib/pyspark.zip -> hdfs:/proyecto_latam/system/spark-staging/max/.sparkStaging/application_1792097632311_0008/pyspark.zip
+26/10/16 03:21:50 INFO Client: Uploading resource file:/opt/spark-4.0.4-bin-hadoop3/python/lib/py4j-0.10.9.9-src.zip -> hdfs:/proyecto_latam/system/spark-staging/max/.sparkStaging/application_1792097632311_0008/py4j-0.10.9.9-src.zip
+26/10/16 03:21:50 INFO Client: Uploading resource file:/var/lib/spark-local/spark-d90954aa-facb-42b7-afb0-cb43be603ace/__spark_conf__15162999786873742584.zip -> hdfs:/proyecto_latam/system/spark-staging/max/.sparkStaging/application_1792097632311_0008/__spark_conf__.zip
+26/10/16 03:21:50 INFO SecurityManager: Changing view acls to: max
+26/10/16 03:21:50 INFO SecurityManager: Changing modify acls to: max
+26/10/16 03:21:50 INFO SecurityManager: Changing view acls groups to: max
+26/10/16 03:21:50 INFO SecurityManager: Changing modify acls groups to: max
+26/10/16 03:21:50 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: max groups with view permissions: EMPTY; users with modify permissions: max; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/16 03:21:50 INFO Client: Submitting application application_1792097632311_0008 to ResourceManager
+26/10/16 03:21:50 INFO YarnClientImpl: Submitted application application_1792097632311_0008
+26/10/16 03:21:51 INFO Client: Application report for application_1792097632311_0008 (state: ACCEPTED)
+26/10/16 03:21:51 INFO Client: 
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: root.default
+	 start time: 1792120910896
+	 final status: UNDEFINED
+	 tracking URL: http://jdmax:8088/proxy/application_1792097632311_0008/
+	 user: max
+26/10/16 03:21:52 INFO YarnClientSchedulerBackend: Add WebUI Filter. org.apache.spark.deploy.yarn.AmIpFilter, Map(PROXY_HOSTS -> jdmax, PROXY_URI_BASES -> http://jdmax:8088/proxy/application_1792097632311_0008), /proxy/application_1792097632311_0008
+26/10/16 03:21:52 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+26/10/16 03:21:52 INFO Client: Application report for application_1792097632311_0008 (state: RUNNING)
+26/10/16 03:21:52 INFO Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 192.168.64.5
+	 ApplicationMaster RPC port: -1
+	 queue: root.default
+	 start time: 1792120910896
+	 final status: UNDEFINED
+	 tracking URL: http://jdmax:8088/proxy/application_1792097632311_0008/
+	 user: max
+26/10/16 03:21:52 INFO YarnClientSchedulerBackend: Application application_1792097632311_0008 has started running.
+26/10/16 03:21:52 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45225.
+26/10/16 03:21:52 INFO NettyBlockTransferService: Server created on jdmax:45225
+26/10/16 03:21:52 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/16 03:21:52 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, jdmax, 45225, None)
+26/10/16 03:21:52 INFO BlockManagerMasterEndpoint: Registering block manager jdmax:45225 with 434.4 MiB RAM, BlockManagerId(driver, jdmax, 45225, None)
+26/10/16 03:21:52 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, jdmax, 45225, None)
+26/10/16 03:21:52 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, jdmax, 45225, None)
+26/10/16 03:21:53 INFO RollingEventLogFilesWriter: Logging events to hdfs:/proyecto_latam/outputs/spark-events/eventlog_v2_application_1792097632311_0008/events_1_application_1792097632311_0008.zstd
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /jobs: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /jobs/json: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /jobs/job: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /jobs/job/json: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /stages: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /stages/json: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /stages/stage: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /stages/stage/json: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /stages/pool: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /stages/pool/json: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /stages/taskThreadDump: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /stages/taskThreadDump/json: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /storage: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /storage/json: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /storage/rdd: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /storage/rdd/json: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /environment: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /environment/json: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /executors: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /executors/json: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /executors/threadDump: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /executors/threadDump/json: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /executors/heapHistogram: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /executors/heapHistogram/json: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /static: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /api: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /metrics: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /jobs/job/kill: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /stages/stage/kill: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:53 INFO ServerInfo: Adding filter to /metrics/json: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:54 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (127.0.0.1:59574) with ID 1, ResourceProfileId 0
+26/10/16 03:21:54 INFO BlockManagerMasterEndpoint: Registering block manager jdmax:39963 with 434.4 MiB RAM, BlockManagerId(1, jdmax, 39963, None)
+26/10/16 03:21:55 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (127.0.0.1:43872) with ID 2, ResourceProfileId 0
+26/10/16 03:21:55 INFO YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+26/10/16 03:21:55 INFO BlockManagerMasterEndpoint: Registering block manager jdmax:38247 with 434.4 MiB RAM, BlockManagerId(2, jdmax, 38247, None)
+================================================================================
+MODULO 05 - VARIABLES DE PROPAGACION DE AERONAVES
+================================================================================
+26/10/16 03:21:56 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+26/10/16 03:21:56 INFO SharedState: Warehouse path is 'file:/tmp/spark-warehouse'.
+26/10/16 03:21:56 INFO ServerInfo: Adding filter to /SQL: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:56 INFO ServerInfo: Adding filter to /SQL/json: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:56 INFO ServerInfo: Adding filter to /SQL/execution: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:56 INFO ServerInfo: Adding filter to /SQL/execution/json: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:56 INFO ServerInfo: Adding filter to /static/sql: org.apache.spark.deploy.yarn.AmIpFilter
+26/10/16 03:21:56 INFO InMemoryFileIndex: It took 65 ms to list leaf files for 1 paths.
+26/10/16 03:21:56 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+26/10/16 03:21:56 INFO DAGScheduler: Got job 0 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+26/10/16 03:21:56 INFO DAGScheduler: Final stage: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0)
+26/10/16 03:21:56 INFO DAGScheduler: Parents of final stage: List()
+26/10/16 03:21:56 INFO DAGScheduler: Missing parents: List()
+26/10/16 03:21:56 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/10/16 03:21:56 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+26/10/16 03:21:56 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 116.2 KiB, free 434.3 MiB)
+26/10/16 03:21:56 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 42.0 KiB, free 434.2 MiB)
+26/10/16 03:21:56 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1676
+26/10/16 03:21:56 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+26/10/16 03:21:56 INFO YarnScheduler: Adding task set 0.0 with 1 tasks resource profile 0
+26/10/16 03:21:56 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (jdmax,executor 1, partition 0, PROCESS_LOCAL, 9717 bytes) 
+26/10/16 03:21:57 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 568 ms on jdmax (executor 1) (1/1)
+26/10/16 03:21:57 INFO YarnScheduler: Removed TaskSet 0.0 whose tasks have all completed, from pool 
+26/10/16 03:21:57 INFO DAGScheduler: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0) finished in 708 ms
+26/10/16 03:21:57 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/16 03:21:57 INFO YarnScheduler: Canceling stage 0
+26/10/16 03:21:57 INFO YarnScheduler: Killing all running tasks in stage 0: Stage finished
+26/10/16 03:21:57 INFO DAGScheduler: Job 0 finished: parquet at NativeMethodAccessorImpl.java:0, took 723.592922 ms
+26/10/16 03:21:57 INFO DataSourceStrategy: Pruning directories with: Set()
+26/10/16 03:21:57 INFO FileSourceStrategy: Pushed Filters: 
+26/10/16 03:21:57 INFO FileSourceStrategy: Post-Scan Filters: Set()
+26/10/16 03:21:57 INFO CodeGenerator: Code generated in 68.862657 ms
+26/10/16 03:21:57 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 220.4 KiB, free 434.2 MiB)
+26/10/16 03:21:57 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 39.8 KiB, free 434.1 MiB)
+26/10/16 03:21:57 INFO SparkContext: Created broadcast 1 from $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:21:57 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+26/10/16 03:21:57 INFO DAGScheduler: Registering RDD 5 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) as input to shuffle 0
+26/10/16 03:21:57 INFO DAGScheduler: Got map stage job 1 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) with 3 output partitions
+26/10/16 03:21:57 INFO DAGScheduler: Final stage: ShuffleMapStage 1 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768)
+26/10/16 03:21:57 INFO DAGScheduler: Parents of final stage: List()
+26/10/16 03:21:57 INFO DAGScheduler: Missing parents: List()
+26/10/16 03:21:57 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[5] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768), which has no missing parents
+26/10/16 03:21:58 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 19.8 KiB, free 434.1 MiB)
+26/10/16 03:21:58 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 8.8 KiB, free 434.1 MiB)
+26/10/16 03:21:58 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1676
+26/10/16 03:21:58 INFO DAGScheduler: Submitting 3 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[5] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) (first 15 tasks are for partitions Vector(0, 1, 2))
+26/10/16 03:21:58 INFO YarnScheduler: Adding task set 1.0 with 3 tasks resource profile 0
+26/10/16 03:21:58 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (jdmax,executor 2, partition 0, NODE_LOCAL, 17879 bytes) 
+26/10/16 03:21:58 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 2) (jdmax,executor 1, partition 1, NODE_LOCAL, 18427 bytes) 
+26/10/16 03:21:58 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 3) (jdmax,executor 1, partition 2, NODE_LOCAL, 11557 bytes) 
+26/10/16 03:21:58 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 2) in 478 ms on jdmax (executor 1) (1/3)
+26/10/16 03:21:58 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 3) in 62 ms on jdmax (executor 1) (2/3)
+26/10/16 03:21:59 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 1005 ms on jdmax (executor 2) (3/3)
+26/10/16 03:21:59 INFO YarnScheduler: Removed TaskSet 1.0 whose tasks have all completed, from pool 
+26/10/16 03:21:59 INFO DAGScheduler: ShuffleMapStage 1 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) finished in 1032 ms
+26/10/16 03:21:59 INFO DAGScheduler: looking for newly runnable stages
+26/10/16 03:21:59 INFO DAGScheduler: running: HashSet()
+26/10/16 03:21:59 INFO DAGScheduler: waiting: HashSet()
+26/10/16 03:21:59 INFO DAGScheduler: failed: HashSet()
+26/10/16 03:21:59 INFO CodeGenerator: Code generated in 4.988213 ms
+26/10/16 03:21:59 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:21:59 INFO DAGScheduler: Got job 2 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) with 1 output partitions
+26/10/16 03:21:59 INFO DAGScheduler: Final stage: ResultStage 3 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768)
+26/10/16 03:21:59 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+26/10/16 03:21:59 INFO DAGScheduler: Missing parents: List()
+26/10/16 03:21:59 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[8] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768), which has no missing parents
+26/10/16 03:21:59 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 13.6 KiB, free 434.1 MiB)
+26/10/16 03:21:59 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 6.5 KiB, free 434.1 MiB)
+26/10/16 03:21:59 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1676
+26/10/16 03:21:59 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[8] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) (first 15 tasks are for partitions Vector(0))
+26/10/16 03:21:59 INFO YarnScheduler: Adding task set 3.0 with 1 tasks resource profile 0
+26/10/16 03:21:59 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 4) (jdmax,executor 1, partition 0, NODE_LOCAL, 9642 bytes) 
+26/10/16 03:21:59 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 127.0.0.1:59574
+26/10/16 03:21:59 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 4) in 89 ms on jdmax (executor 1) (1/1)
+26/10/16 03:21:59 INFO YarnScheduler: Removed TaskSet 3.0 whose tasks have all completed, from pool 
+26/10/16 03:21:59 INFO DAGScheduler: ResultStage 3 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) finished in 108 ms
+26/10/16 03:21:59 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/16 03:21:59 INFO YarnScheduler: Canceling stage 3
+26/10/16 03:21:59 INFO YarnScheduler: Killing all running tasks in stage 3: Stage finished
+26/10/16 03:21:59 INFO DAGScheduler: Job 2 finished: $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768, took 120.5196 ms
+Registros de entrada: 1149291
+26/10/16 03:21:59 INFO InMemoryFileIndex: It took 2 ms to list leaf files for 1 paths.
+26/10/16 03:21:59 INFO InMemoryFileIndex: It took 1 ms to list leaf files for 1 paths.
+26/10/16 03:21:59 INFO FileSourceStrategy: Pushed Filters: 
+26/10/16 03:21:59 INFO FileSourceStrategy: Post-Scan Filters: Set((length(trim(value#70, None)) > 0))
+26/10/16 03:21:59 INFO CodeGenerator: Code generated in 10.569584 ms
+26/10/16 03:21:59 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 219.1 KiB, free 433.9 MiB)
+26/10/16 03:21:59 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 39.4 KiB, free 433.9 MiB)
+26/10/16 03:21:59 INFO SparkContext: Created broadcast 4 from csv at NativeMethodAccessorImpl.java:0
+26/10/16 03:21:59 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+26/10/16 03:21:59 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+26/10/16 03:21:59 INFO DAGScheduler: Got job 3 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+26/10/16 03:21:59 INFO DAGScheduler: Final stage: ResultStage 4 (csv at NativeMethodAccessorImpl.java:0)
+26/10/16 03:21:59 INFO DAGScheduler: Parents of final stage: List()
+26/10/16 03:21:59 INFO DAGScheduler: Missing parents: List()
+26/10/16 03:21:59 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[12] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/10/16 03:21:59 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 14.3 KiB, free 433.9 MiB)
+26/10/16 03:21:59 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 6.8 KiB, free 433.9 MiB)
+26/10/16 03:21:59 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1676
+26/10/16 03:21:59 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[12] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+26/10/16 03:21:59 INFO YarnScheduler: Adding task set 4.0 with 1 tasks resource profile 0
+26/10/16 03:21:59 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 5) (jdmax,executor 1, partition 0, NODE_LOCAL, 10281 bytes) 
+26/10/16 03:21:59 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 5) in 94 ms on jdmax (executor 1) (1/1)
+26/10/16 03:21:59 INFO YarnScheduler: Removed TaskSet 4.0 whose tasks have all completed, from pool 
+26/10/16 03:21:59 INFO DAGScheduler: ResultStage 4 (csv at NativeMethodAccessorImpl.java:0) finished in 102 ms
+26/10/16 03:21:59 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/16 03:21:59 INFO YarnScheduler: Canceling stage 4
+26/10/16 03:21:59 INFO YarnScheduler: Killing all running tasks in stage 4: Stage finished
+26/10/16 03:21:59 INFO DAGScheduler: Job 3 finished: csv at NativeMethodAccessorImpl.java:0, took 106.133786 ms
+26/10/16 03:21:59 INFO CodeGenerator: Code generated in 4.152976 ms
+26/10/16 03:21:59 INFO FileSourceStrategy: Pushed Filters: 
+26/10/16 03:21:59 INFO FileSourceStrategy: Post-Scan Filters: Set()
+26/10/16 03:21:59 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 219.1 KiB, free 433.7 MiB)
+26/10/16 03:21:59 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 39.4 KiB, free 433.6 MiB)
+26/10/16 03:21:59 INFO SparkContext: Created broadcast 6 from csv at NativeMethodAccessorImpl.java:0
+26/10/16 03:21:59 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+26/10/16 03:21:59 INFO DataSourceStrategy: Pruning directories with: Set()
+26/10/16 03:21:59 INFO FileSourceStrategy: Pushed Filters: 
+26/10/16 03:21:59 INFO FileSourceStrategy: Post-Scan Filters: Set()
+26/10/16 03:21:59 INFO FileSourceStrategy: Pushed Filters: IsNotNull(origin)
+26/10/16 03:21:59 INFO FileSourceStrategy: Post-Scan Filters: Set(isnotnull(origin#87))
+26/10/16 03:21:59 INFO CodeGenerator: Code generated in 5.795992 ms
+26/10/16 03:21:59 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 219.0 KiB, free 433.7 MiB)
+26/10/16 03:21:59 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 39.4 KiB, free 433.6 MiB)
+26/10/16 03:21:59 INFO SparkContext: Created broadcast 7 from $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:21:59 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+26/10/16 03:21:59 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:21:59 INFO DAGScheduler: Got job 4 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) with 1 output partitions
+26/10/16 03:21:59 INFO DAGScheduler: Final stage: ResultStage 5 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768)
+26/10/16 03:21:59 INFO DAGScheduler: Parents of final stage: List()
+26/10/16 03:21:59 INFO DAGScheduler: Missing parents: List()
+26/10/16 03:21:59 INFO DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[22] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768), which has no missing parents
+26/10/16 03:21:59 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 16.4 KiB, free 433.9 MiB)
+26/10/16 03:21:59 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 7.9 KiB, free 433.9 MiB)
+26/10/16 03:21:59 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1676
+26/10/16 03:21:59 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[22] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) (first 15 tasks are for partitions Vector(0))
+26/10/16 03:21:59 INFO YarnScheduler: Adding task set 5.0 with 1 tasks resource profile 0
+26/10/16 03:21:59 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 6) (jdmax,executor 2, partition 0, NODE_LOCAL, 10281 bytes) 
+26/10/16 03:22:00 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 6) in 134 ms on jdmax (executor 2) (1/1)
+26/10/16 03:22:00 INFO YarnScheduler: Removed TaskSet 5.0 whose tasks have all completed, from pool 
+26/10/16 03:22:00 INFO DAGScheduler: ResultStage 5 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) finished in 146 ms
+26/10/16 03:22:00 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/16 03:22:00 INFO YarnScheduler: Canceling stage 5
+26/10/16 03:22:00 INFO YarnScheduler: Killing all running tasks in stage 5: Stage finished
+26/10/16 03:22:00 INFO DAGScheduler: Job 4 finished: $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768, took 148.940902 ms
+26/10/16 03:22:00 INFO CodeGenerator: Code generated in 3.602985 ms
+26/10/16 03:22:00 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 241.0 B, free 433.9 MiB)
+26/10/16 03:22:00 INFO SparkContext: Created broadcast 9 from $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:22:00 INFO DataSourceStrategy: Pruning directories with: Set()
+26/10/16 03:22:00 INFO FileSourceStrategy: Pushed Filters: 
+26/10/16 03:22:00 INFO FileSourceStrategy: Post-Scan Filters: Set()
+26/10/16 03:22:00 INFO CodeGenerator: Code generated in 51.98985 ms
+26/10/16 03:22:00 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 220.5 KiB, free 433.9 MiB)
+26/10/16 03:22:00 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 40.0 KiB, free 433.9 MiB)
+26/10/16 03:22:00 INFO SparkContext: Created broadcast 10 from $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:22:00 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+26/10/16 03:22:00 INFO DAGScheduler: Registering RDD 26 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) as input to shuffle 1
+26/10/16 03:22:00 INFO DAGScheduler: Got map stage job 5 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) with 3 output partitions
+26/10/16 03:22:00 INFO DAGScheduler: Final stage: ShuffleMapStage 6 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768)
+26/10/16 03:22:00 INFO DAGScheduler: Parents of final stage: List()
+26/10/16 03:22:00 INFO DAGScheduler: Missing parents: List()
+26/10/16 03:22:00 INFO DAGScheduler: Submitting ShuffleMapStage 6 (MapPartitionsRDD[26] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768), which has no missing parents
+26/10/16 03:22:00 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 22.5 KiB, free 433.9 MiB)
+26/10/16 03:22:00 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 9.7 KiB, free 433.9 MiB)
+26/10/16 03:22:00 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1676
+26/10/16 03:22:00 INFO DAGScheduler: Submitting 3 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[26] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) (first 15 tasks are for partitions Vector(0, 1, 2))
+26/10/16 03:22:00 INFO YarnScheduler: Adding task set 6.0 with 3 tasks resource profile 0
+26/10/16 03:22:00 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 7) (jdmax,executor 2, partition 0, NODE_LOCAL, 17879 bytes) 
+26/10/16 03:22:00 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 8) (jdmax,executor 1, partition 1, NODE_LOCAL, 18427 bytes) 
+26/10/16 03:22:00 INFO TaskSetManager: Starting task 2.0 in stage 6.0 (TID 9) (jdmax,executor 2, partition 2, NODE_LOCAL, 11562 bytes) 
+26/10/16 03:22:00 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 7) in 454 ms on jdmax (executor 2) (1/3)
+26/10/16 03:22:00 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 8) in 479 ms on jdmax (executor 1) (2/3)
+26/10/16 03:22:00 INFO TaskSetManager: Finished task 2.0 in stage 6.0 (TID 9) in 66 ms on jdmax (executor 2) (3/3)
+26/10/16 03:22:00 INFO YarnScheduler: Removed TaskSet 6.0 whose tasks have all completed, from pool 
+26/10/16 03:22:00 INFO DAGScheduler: ShuffleMapStage 6 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) finished in 513 ms
+26/10/16 03:22:00 INFO DAGScheduler: looking for newly runnable stages
+26/10/16 03:22:00 INFO DAGScheduler: running: HashSet()
+26/10/16 03:22:00 INFO DAGScheduler: waiting: HashSet()
+26/10/16 03:22:00 INFO DAGScheduler: failed: HashSet()
+26/10/16 03:22:00 INFO CodeGenerator: Code generated in 4.794633 ms
+26/10/16 03:22:00 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:22:00 INFO DAGScheduler: Got job 6 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) with 1 output partitions
+26/10/16 03:22:00 INFO DAGScheduler: Final stage: ResultStage 8 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768)
+26/10/16 03:22:00 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 7)
+26/10/16 03:22:00 INFO DAGScheduler: Missing parents: List()
+26/10/16 03:22:00 INFO DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[29] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768), which has no missing parents
+26/10/16 03:22:00 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 13.6 KiB, free 433.8 MiB)
+26/10/16 03:22:00 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 6.5 KiB, free 433.8 MiB)
+26/10/16 03:22:00 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:1676
+26/10/16 03:22:00 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[29] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) (first 15 tasks are for partitions Vector(0))
+26/10/16 03:22:00 INFO YarnScheduler: Adding task set 8.0 with 1 tasks resource profile 0
+26/10/16 03:22:00 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 10) (jdmax,executor 1, partition 0, NODE_LOCAL, 9642 bytes) 
+26/10/16 03:22:00 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 127.0.0.1:59574
+26/10/16 03:22:00 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 10) in 70 ms on jdmax (executor 1) (1/1)
+26/10/16 03:22:00 INFO YarnScheduler: Removed TaskSet 8.0 whose tasks have all completed, from pool 
+26/10/16 03:22:00 INFO DAGScheduler: ResultStage 8 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) finished in 84 ms
+26/10/16 03:22:00 INFO DAGScheduler: Job 6 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/16 03:22:00 INFO YarnScheduler: Canceling stage 8
+26/10/16 03:22:00 INFO YarnScheduler: Killing all running tasks in stage 8: Stage finished
+26/10/16 03:22:00 INFO DAGScheduler: Job 6 finished: $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768, took 93.603488 ms
+Registros finales: 1149291
+Columnas finales: 47
+
+VARIABLES DE PROPAGACION
+scheduled_arr_utc: OK
+previous_flight_delay: OK
+previous_flight_scheduled_arrival: OK
+previous_flight_origin: OK
+previous_flight_dest: OK
+turnaround_minutes: OK
+aircraft_previous_flights: OK
+aircraft_recent_avg_delay: OK
+aircraft_recent_max_delay: OK
+aircraft_previous_delay_rate: OK
+aircraft_previous_delayed_count: OK
+
+COMPLETITUD DE VARIABLES
+26/10/16 03:22:00 INFO DataSourceStrategy: Pruning directories with: Set()
+26/10/16 03:22:00 INFO FileSourceStrategy: Pushed Filters: 
+26/10/16 03:22:00 INFO FileSourceStrategy: Post-Scan Filters: Set()
+26/10/16 03:22:00 INFO FileSourceStrategy: Pushed Filters: IsNotNull(origin)
+26/10/16 03:22:00 INFO FileSourceStrategy: Post-Scan Filters: Set(isnotnull(origin#87))
+26/10/16 03:22:00 INFO CodeGenerator: Code generated in 3.97552 ms
+26/10/16 03:22:00 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 219.0 KiB, free 433.7 MiB)
+26/10/16 03:22:00 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 39.4 KiB, free 433.6 MiB)
+26/10/16 03:22:00 INFO SparkContext: Created broadcast 13 from $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:22:00 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+26/10/16 03:22:00 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:22:00 INFO DAGScheduler: Got job 7 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) with 1 output partitions
+26/10/16 03:22:00 INFO DAGScheduler: Final stage: ResultStage 9 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768)
+26/10/16 03:22:00 INFO DAGScheduler: Parents of final stage: List()
+26/10/16 03:22:00 INFO DAGScheduler: Missing parents: List()
+26/10/16 03:22:00 INFO DAGScheduler: Submitting ResultStage 9 (MapPartitionsRDD[33] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768), which has no missing parents
+26/10/16 03:22:00 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 16.9 KiB, free 434.1 MiB)
+26/10/16 03:22:00 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 8.0 KiB, free 434.1 MiB)
+26/10/16 03:22:00 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:1676
+26/10/16 03:22:00 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 9 (MapPartitionsRDD[33] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) (first 15 tasks are for partitions Vector(0))
+26/10/16 03:22:00 INFO YarnScheduler: Adding task set 9.0 with 1 tasks resource profile 0
+26/10/16 03:22:00 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 11) (jdmax,executor 2, partition 0, NODE_LOCAL, 10281 bytes) 
+26/10/16 03:22:01 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 11) in 101 ms on jdmax (executor 2) (1/1)
+26/10/16 03:22:01 INFO YarnScheduler: Removed TaskSet 9.0 whose tasks have all completed, from pool 
+26/10/16 03:22:01 INFO DAGScheduler: ResultStage 9 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) finished in 118 ms
+26/10/16 03:22:01 INFO DAGScheduler: Job 7 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/16 03:22:01 INFO YarnScheduler: Canceling stage 9
+26/10/16 03:22:01 INFO YarnScheduler: Killing all running tasks in stage 9: Stage finished
+26/10/16 03:22:01 INFO DAGScheduler: Job 7 finished: $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768, took 122.539245 ms
+26/10/16 03:22:01 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 371.0 B, free 434.1 MiB)
+26/10/16 03:22:01 INFO SparkContext: Created broadcast 15 from $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:22:01 INFO DataSourceStrategy: Pruning directories with: Set()
+26/10/16 03:22:01 INFO FileSourceStrategy: Pushed Filters: 
+26/10/16 03:22:01 INFO FileSourceStrategy: Post-Scan Filters: Set()
+26/10/16 03:22:01 INFO CodeGenerator: Code generated in 43.361488 ms
+26/10/16 03:22:01 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 221.7 KiB, free 433.9 MiB)
+26/10/16 03:22:01 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 40.2 KiB, free 433.9 MiB)
+26/10/16 03:22:01 INFO SparkContext: Created broadcast 16 from $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:22:01 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+26/10/16 03:22:01 INFO DAGScheduler: Registering RDD 37 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) as input to shuffle 2
+26/10/16 03:22:01 INFO DAGScheduler: Got map stage job 8 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) with 3 output partitions
+26/10/16 03:22:01 INFO DAGScheduler: Final stage: ShuffleMapStage 10 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768)
+26/10/16 03:22:01 INFO DAGScheduler: Parents of final stage: List()
+26/10/16 03:22:01 INFO DAGScheduler: Missing parents: List()
+26/10/16 03:22:01 INFO DAGScheduler: Submitting ShuffleMapStage 10 (MapPartitionsRDD[37] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768), which has no missing parents
+26/10/16 03:22:01 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 43.8 KiB, free 433.8 MiB)
+26/10/16 03:22:01 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 15.9 KiB, free 433.8 MiB)
+26/10/16 03:22:01 INFO SparkContext: Created broadcast 17 from broadcast at DAGScheduler.scala:1676
+26/10/16 03:22:01 INFO DAGScheduler: Submitting 3 missing tasks from ShuffleMapStage 10 (MapPartitionsRDD[37] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) (first 15 tasks are for partitions Vector(0, 1, 2))
+26/10/16 03:22:01 INFO YarnScheduler: Adding task set 10.0 with 3 tasks resource profile 0
+26/10/16 03:22:01 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 12) (jdmax,executor 1, partition 0, NODE_LOCAL, 17884 bytes) 
+26/10/16 03:22:01 INFO TaskSetManager: Starting task 1.0 in stage 10.0 (TID 13) (jdmax,executor 2, partition 1, NODE_LOCAL, 18432 bytes) 
+26/10/16 03:22:02 INFO TaskSetManager: Starting task 2.0 in stage 10.0 (TID 14) (jdmax,executor 2, partition 2, NODE_LOCAL, 11562 bytes) 
+26/10/16 03:22:02 INFO TaskSetManager: Finished task 1.0 in stage 10.0 (TID 13) in 1551 ms on jdmax (executor 2) (1/3)
+26/10/16 03:22:02 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 12) in 1647 ms on jdmax (executor 1) (2/3)
+26/10/16 03:22:02 INFO TaskSetManager: Finished task 2.0 in stage 10.0 (TID 14) in 181 ms on jdmax (executor 2) (3/3)
+26/10/16 03:22:02 INFO YarnScheduler: Removed TaskSet 10.0 whose tasks have all completed, from pool 
+26/10/16 03:22:02 INFO DAGScheduler: ShuffleMapStage 10 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) finished in 1735 ms
+26/10/16 03:22:02 INFO DAGScheduler: looking for newly runnable stages
+26/10/16 03:22:02 INFO DAGScheduler: running: HashSet()
+26/10/16 03:22:02 INFO DAGScheduler: waiting: HashSet()
+26/10/16 03:22:02 INFO DAGScheduler: failed: HashSet()
+26/10/16 03:22:02 INFO ShufflePartitionsUtil: For shuffle(2, advisory target size: 67108864, actual target size 16978979, minimum partition size: 1048576
+26/10/16 03:22:02 INFO CodeGenerator: Code generated in 10.997662 ms
+26/10/16 03:22:03 INFO CodeGenerator: Code generated in 6.917184 ms
+26/10/16 03:22:03 INFO CodeGenerator: Code generated in 6.585272 ms
+26/10/16 03:22:03 INFO CodeGenerator: Code generated in 5.317459 ms
+26/10/16 03:22:03 INFO CodeGenerator: Code generated in 4.456764 ms
+26/10/16 03:22:03 INFO DAGScheduler: Registering RDD 48 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) as input to shuffle 3
+26/10/16 03:22:03 INFO DAGScheduler: Got map stage job 9 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) with 2 output partitions
+26/10/16 03:22:03 INFO DAGScheduler: Final stage: ShuffleMapStage 12 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768)
+26/10/16 03:22:03 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 11)
+26/10/16 03:22:03 INFO DAGScheduler: Missing parents: List()
+26/10/16 03:22:03 INFO DAGScheduler: Submitting ShuffleMapStage 12 (MapPartitionsRDD[48] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768), which has no missing parents
+26/10/16 03:22:03 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 90.1 KiB, free 433.7 MiB)
+26/10/16 03:22:03 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 33.2 KiB, free 433.7 MiB)
+26/10/16 03:22:03 INFO SparkContext: Created broadcast 18 from broadcast at DAGScheduler.scala:1676
+26/10/16 03:22:03 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 12 (MapPartitionsRDD[48] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) (first 15 tasks are for partitions Vector(0, 1))
+26/10/16 03:22:03 INFO YarnScheduler: Adding task set 12.0 with 2 tasks resource profile 0
+26/10/16 03:22:03 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 15) (jdmax,executor 2, partition 0, NODE_LOCAL, 9631 bytes) 
+26/10/16 03:22:03 INFO TaskSetManager: Starting task 1.0 in stage 12.0 (TID 16) (jdmax,executor 1, partition 1, NODE_LOCAL, 9631 bytes) 
+26/10/16 03:22:03 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 127.0.0.1:59574
+26/10/16 03:22:03 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 127.0.0.1:43872
+26/10/16 03:22:04 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 15) in 1569 ms on jdmax (executor 2) (1/2)
+26/10/16 03:22:04 INFO TaskSetManager: Finished task 1.0 in stage 12.0 (TID 16) in 1638 ms on jdmax (executor 1) (2/2)
+26/10/16 03:22:04 INFO YarnScheduler: Removed TaskSet 12.0 whose tasks have all completed, from pool 
+26/10/16 03:22:04 INFO DAGScheduler: ShuffleMapStage 12 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) finished in 1654 ms
+26/10/16 03:22:04 INFO DAGScheduler: looking for newly runnable stages
+26/10/16 03:22:04 INFO DAGScheduler: running: HashSet()
+26/10/16 03:22:04 INFO DAGScheduler: waiting: HashSet()
+26/10/16 03:22:04 INFO DAGScheduler: failed: HashSet()
+26/10/16 03:22:04 INFO CodeGenerator: Code generated in 18.805876 ms
+26/10/16 03:22:04 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:22:04 INFO DAGScheduler: Got job 10 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) with 1 output partitions
+26/10/16 03:22:04 INFO DAGScheduler: Final stage: ResultStage 15 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768)
+26/10/16 03:22:04 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 14)
+26/10/16 03:22:04 INFO DAGScheduler: Missing parents: List()
+26/10/16 03:22:04 INFO DAGScheduler: Submitting ResultStage 15 (MapPartitionsRDD[51] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768), which has no missing parents
+26/10/16 03:22:04 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 35.2 KiB, free 433.7 MiB)
+26/10/16 03:22:04 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 11.1 KiB, free 433.7 MiB)
+26/10/16 03:22:04 INFO SparkContext: Created broadcast 19 from broadcast at DAGScheduler.scala:1676
+26/10/16 03:22:04 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 15 (MapPartitionsRDD[51] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) (first 15 tasks are for partitions Vector(0))
+26/10/16 03:22:04 INFO YarnScheduler: Adding task set 15.0 with 1 tasks resource profile 0
+26/10/16 03:22:04 INFO TaskSetManager: Starting task 0.0 in stage 15.0 (TID 17) (jdmax,executor 2, partition 0, NODE_LOCAL, 9642 bytes) 
+26/10/16 03:22:04 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 3 to 127.0.0.1:43872
+26/10/16 03:22:04 INFO TaskSetManager: Finished task 0.0 in stage 15.0 (TID 17) in 115 ms on jdmax (executor 2) (1/1)
+26/10/16 03:22:04 INFO YarnScheduler: Removed TaskSet 15.0 whose tasks have all completed, from pool 
+26/10/16 03:22:04 INFO DAGScheduler: ResultStage 15 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) finished in 157 ms
+26/10/16 03:22:04 INFO DAGScheduler: Job 10 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/16 03:22:04 INFO YarnScheduler: Canceling stage 15
+26/10/16 03:22:04 INFO YarnScheduler: Killing all running tasks in stage 15: Stage finished
+26/10/16 03:22:04 INFO DAGScheduler: Job 10 finished: $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768, took 168.98034 ms
+26/10/16 03:22:04 INFO CodeGenerator: Code generated in 7.236304 ms
++-------+---------------------+------------------+-------------------------+-------------------------+----------------------------+-------------------------------+
+|summary|previous_flight_delay|turnaround_minutes|aircraft_recent_avg_delay|aircraft_recent_max_delay|aircraft_previous_delay_rate|aircraft_previous_delayed_count|
++-------+---------------------+------------------+-------------------------+-------------------------+----------------------------+-------------------------------+
+|count  |62536                |199138            |907455                   |907455                   |1143291                     |1143291                        |
++-------+---------------------+------------------+-------------------------+-------------------------+----------------------------+-------------------------------+
+
+26/10/16 03:22:05 INFO DataSourceStrategy: Pruning directories with: Set()
+26/10/16 03:22:05 INFO FileSourceStrategy: Pushed Filters: 
+26/10/16 03:22:05 INFO FileSourceStrategy: Post-Scan Filters: Set()
+26/10/16 03:22:05 INFO FileSourceStrategy: Pushed Filters: IsNotNull(origin)
+26/10/16 03:22:05 INFO FileSourceStrategy: Post-Scan Filters: Set(isnotnull(origin#87))
+26/10/16 03:22:05 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+26/10/16 03:22:05 INFO MemoryStore: Block broadcast_20 stored as values in memory (estimated size 219.0 KiB, free 433.6 MiB)
+26/10/16 03:22:05 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 39.4 KiB, free 433.6 MiB)
+26/10/16 03:22:05 INFO SparkContext: Created broadcast 20 from $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:22:05 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+26/10/16 03:22:05 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:22:05 INFO DAGScheduler: Got job 11 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) with 1 output partitions
+26/10/16 03:22:05 INFO DAGScheduler: Final stage: ResultStage 16 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768)
+26/10/16 03:22:05 INFO DAGScheduler: Parents of final stage: List()
+26/10/16 03:22:05 INFO DAGScheduler: Missing parents: List()
+26/10/16 03:22:05 INFO DAGScheduler: Submitting ResultStage 16 (MapPartitionsRDD[55] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768), which has no missing parents
+26/10/16 03:22:05 INFO MemoryStore: Block broadcast_21 stored as values in memory (estimated size 16.9 KiB, free 433.8 MiB)
+26/10/16 03:22:05 INFO MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 8.0 KiB, free 433.8 MiB)
+26/10/16 03:22:05 INFO SparkContext: Created broadcast 21 from broadcast at DAGScheduler.scala:1676
+26/10/16 03:22:05 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 16 (MapPartitionsRDD[55] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) (first 15 tasks are for partitions Vector(0))
+26/10/16 03:22:05 INFO YarnScheduler: Adding task set 16.0 with 1 tasks resource profile 0
+26/10/16 03:22:05 INFO TaskSetManager: Starting task 0.0 in stage 16.0 (TID 18) (jdmax,executor 2, partition 0, NODE_LOCAL, 10281 bytes) 
+26/10/16 03:22:05 INFO TaskSetManager: Finished task 0.0 in stage 16.0 (TID 18) in 64 ms on jdmax (executor 2) (1/1)
+26/10/16 03:22:05 INFO YarnScheduler: Removed TaskSet 16.0 whose tasks have all completed, from pool 
+26/10/16 03:22:05 INFO DAGScheduler: ResultStage 16 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) finished in 67 ms
+26/10/16 03:22:05 INFO DAGScheduler: Job 11 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/16 03:22:05 INFO YarnScheduler: Canceling stage 16
+26/10/16 03:22:05 INFO YarnScheduler: Killing all running tasks in stage 16: Stage finished
+26/10/16 03:22:05 INFO DAGScheduler: Job 11 finished: $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768, took 72.696586 ms
+26/10/16 03:22:05 INFO MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 371.0 B, free 434.1 MiB)
+26/10/16 03:22:05 INFO SparkContext: Created broadcast 22 from $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:22:05 INFO DataSourceStrategy: Pruning directories with: Set()
+26/10/16 03:22:05 INFO FileSourceStrategy: Pushed Filters: 
+26/10/16 03:22:05 INFO FileSourceStrategy: Post-Scan Filters: Set()
+26/10/16 03:22:05 INFO CodeGenerator: Code generated in 29.382921 ms
+26/10/16 03:22:05 INFO MemoryStore: Block broadcast_23 stored as values in memory (estimated size 224.6 KiB, free 433.9 MiB)
+26/10/16 03:22:05 INFO MemoryStore: Block broadcast_23_piece0 stored as bytes in memory (estimated size 40.7 KiB, free 433.9 MiB)
+26/10/16 03:22:05 INFO SparkContext: Created broadcast 23 from $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:22:05 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+26/10/16 03:22:05 INFO DAGScheduler: Registering RDD 59 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) as input to shuffle 4
+26/10/16 03:22:05 INFO DAGScheduler: Got map stage job 12 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) with 3 output partitions
+26/10/16 03:22:05 INFO DAGScheduler: Final stage: ShuffleMapStage 17 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768)
+26/10/16 03:22:05 INFO DAGScheduler: Parents of final stage: List()
+26/10/16 03:22:05 INFO DAGScheduler: Missing parents: List()
+26/10/16 03:22:05 INFO DAGScheduler: Submitting ShuffleMapStage 17 (MapPartitionsRDD[59] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768), which has no missing parents
+26/10/16 03:22:05 INFO MemoryStore: Block broadcast_24 stored as values in memory (estimated size 61.1 KiB, free 433.8 MiB)
+26/10/16 03:22:05 INFO MemoryStore: Block broadcast_24_piece0 stored as bytes in memory (estimated size 18.5 KiB, free 433.8 MiB)
+26/10/16 03:22:05 INFO SparkContext: Created broadcast 24 from broadcast at DAGScheduler.scala:1676
+26/10/16 03:22:05 INFO DAGScheduler: Submitting 3 missing tasks from ShuffleMapStage 17 (MapPartitionsRDD[59] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) (first 15 tasks are for partitions Vector(0, 1, 2))
+26/10/16 03:22:05 INFO YarnScheduler: Adding task set 17.0 with 3 tasks resource profile 0
+26/10/16 03:22:05 INFO TaskSetManager: Starting task 0.0 in stage 17.0 (TID 19) (jdmax,executor 1, partition 0, NODE_LOCAL, 17884 bytes) 
+26/10/16 03:22:05 INFO TaskSetManager: Starting task 1.0 in stage 17.0 (TID 20) (jdmax,executor 2, partition 1, NODE_LOCAL, 18432 bytes) 
+26/10/16 03:22:06 INFO TaskSetManager: Starting task 2.0 in stage 17.0 (TID 21) (jdmax,executor 2, partition 2, NODE_LOCAL, 11562 bytes) 
+26/10/16 03:22:06 INFO TaskSetManager: Finished task 1.0 in stage 17.0 (TID 20) in 1223 ms on jdmax (executor 2) (1/3)
+26/10/16 03:22:06 INFO TaskSetManager: Finished task 2.0 in stage 17.0 (TID 21) in 301 ms on jdmax (executor 2) (2/3)
+26/10/16 03:22:07 INFO TaskSetManager: Finished task 0.0 in stage 17.0 (TID 19) in 1722 ms on jdmax (executor 1) (3/3)
+26/10/16 03:22:07 INFO YarnScheduler: Removed TaskSet 17.0 whose tasks have all completed, from pool 
+26/10/16 03:22:07 INFO DAGScheduler: ShuffleMapStage 17 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) finished in 1735 ms
+26/10/16 03:22:07 INFO DAGScheduler: looking for newly runnable stages
+26/10/16 03:22:07 INFO DAGScheduler: running: HashSet()
+26/10/16 03:22:07 INFO DAGScheduler: waiting: HashSet()
+26/10/16 03:22:07 INFO DAGScheduler: failed: HashSet()
+26/10/16 03:22:07 INFO ShufflePartitionsUtil: For shuffle(4, advisory target size: 67108864, actual target size 64202578, minimum partition size: 1048576
+26/10/16 03:22:07 INFO ParquetUtils: Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+26/10/16 03:22:07 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+26/10/16 03:22:07 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+26/10/16 03:22:07 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+26/10/16 03:22:07 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+26/10/16 03:22:07 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+26/10/16 03:22:07 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+26/10/16 03:22:07 INFO CodeGenerator: Code generated in 10.346341 ms
+26/10/16 03:22:07 INFO CodeGenerator: Code generated in 5.233503 ms
+26/10/16 03:22:07 INFO CodeGenerator: Code generated in 5.896743 ms
+26/10/16 03:22:07 INFO CodeGenerator: Code generated in 16.536496 ms
+26/10/16 03:22:07 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768
+26/10/16 03:22:07 INFO DAGScheduler: Got job 13 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) with 3 output partitions
+26/10/16 03:22:07 INFO DAGScheduler: Final stage: ResultStage 19 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768)
+26/10/16 03:22:07 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 18)
+26/10/16 03:22:07 INFO DAGScheduler: Missing parents: List()
+26/10/16 03:22:07 INFO DAGScheduler: Submitting ResultStage 19 (MapPartitionsRDD[70] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768), which has no missing parents
+26/10/16 03:22:07 INFO MemoryStore: Block broadcast_25 stored as values in memory (estimated size 376.7 KiB, free 433.4 MiB)
+26/10/16 03:22:07 INFO MemoryStore: Block broadcast_25_piece0 stored as bytes in memory (estimated size 126.2 KiB, free 433.3 MiB)
+26/10/16 03:22:07 INFO SparkContext: Created broadcast 25 from broadcast at DAGScheduler.scala:1676
+26/10/16 03:22:07 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 19 (MapPartitionsRDD[70] at $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) (first 15 tasks are for partitions Vector(0, 1, 2))
+26/10/16 03:22:07 INFO YarnScheduler: Adding task set 19.0 with 3 tasks resource profile 0
+26/10/16 03:22:07 INFO TaskSetManager: Starting task 0.0 in stage 19.0 (TID 22) (jdmax,executor 2, partition 0, NODE_LOCAL, 9642 bytes) 
+26/10/16 03:22:07 INFO TaskSetManager: Starting task 1.0 in stage 19.0 (TID 23) (jdmax,executor 1, partition 1, NODE_LOCAL, 9642 bytes) 
+26/10/16 03:22:07 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 127.0.0.1:43872
+26/10/16 03:22:07 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 127.0.0.1:59574
+26/10/16 03:22:30 INFO TaskSetManager: Starting task 2.0 in stage 19.0 (TID 24) (jdmax,executor 1, partition 2, NODE_LOCAL, 9642 bytes) 
+26/10/16 03:22:30 INFO TaskSetManager: Finished task 1.0 in stage 19.0 (TID 23) in 23440 ms on jdmax (executor 1) (1/3)
+26/10/16 03:22:31 INFO TaskSetManager: Finished task 0.0 in stage 19.0 (TID 22) in 24745 ms on jdmax (executor 2) (2/3)
+26/10/16 03:22:53 INFO TaskSetManager: Finished task 2.0 in stage 19.0 (TID 24) in 22932 ms on jdmax (executor 1) (3/3)
+26/10/16 03:22:53 INFO YarnScheduler: Removed TaskSet 19.0 whose tasks have all completed, from pool 
+26/10/16 03:22:53 INFO DAGScheduler: ResultStage 19 ($anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768) finished in 46409 ms
+26/10/16 03:22:53 INFO DAGScheduler: Job 13 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/16 03:22:53 INFO YarnScheduler: Canceling stage 19
+26/10/16 03:22:53 INFO YarnScheduler: Killing all running tasks in stage 19: Stage finished
+26/10/16 03:22:53 INFO DAGScheduler: Job 13 finished: $anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768, took 46413.191111 ms
+26/10/16 03:22:53 INFO FileFormatWriter: Start to commit write Job 7486e242-9f5b-44c8-ba38-63889be9be6a.
+26/10/16 03:22:53 INFO FileFormatWriter: Write Job 7486e242-9f5b-44c8-ba38-63889be9be6a committed. Elapsed time: 421 ms.
+26/10/16 03:22:53 INFO FileFormatWriter: Finished processing stats for write job 7486e242-9f5b-44c8-ba38-63889be9be6a.
+
+ZONA GENERADA:
+hdfs:///proyecto_latam/staging/bts_prop
+26/10/16 03:22:53 INFO SparkContext: SparkContext is stopping with exitCode 0 from stop at NativeMethodAccessorImpl.java:0.
+26/10/16 03:22:53 INFO SparkUI: Stopped Spark web UI at http://jdmax:4040
+26/10/16 03:22:53 INFO YarnClientSchedulerBackend: Interrupting monitor thread
+26/10/16 03:22:53 INFO YarnClientSchedulerBackend: Shutting down all executors
+26/10/16 03:22:53 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+26/10/16 03:22:53 INFO YarnClientSchedulerBackend: YARN client scheduler backend Stopped
+26/10/16 03:22:54 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+26/10/16 03:22:54 INFO MemoryStore: MemoryStore cleared
+26/10/16 03:22:54 INFO BlockManager: BlockManager stopped
+26/10/16 03:22:54 INFO BlockManagerMaster: BlockManagerMaster stopped
+26/10/16 03:22:54 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+26/10/16 03:22:54 INFO SparkContext: Successfully stopped SparkContext
+26/10/16 03:22:54 INFO ShutdownHookManager: Shutdown hook called
+26/10/16 03:22:54 INFO ShutdownHookManager: Deleting directory /tmp/spark-92553c0e-0bdd-40df-bc37-c06013ef7684
+26/10/16 03:22:54 INFO ShutdownHookManager: Deleting directory /tmp/artifacts-cd0d47e9-1d68-4f1d-bc84-e8b8b5a40ea0
+26/10/16 03:22:54 INFO ShutdownHookManager: Deleting directory /var/lib/spark-local/spark-d90954aa-facb-42b7-afb0-cb43be603ace
+26/10/16 03:22:54 INFO ShutdownHookManager: Deleting directory /var/lib/spark-local/spark-d90954aa-facb-42b7-afb0-cb43be603ace/pyspark-427fe1cd-329a-4207-923f-0dbd91b9c7e3

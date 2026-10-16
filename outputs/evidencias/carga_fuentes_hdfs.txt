@@ -1,0 +1,29 @@
+CARGA DE FUENTES EN HDFS
+Fecha:
+Thu Oct 15 07:14:37 PM UTC 2026
+
+Archivos BTS:
+Found 7 items
+-rw-r--r--   1 max supergroup    233.3 M 2026-10-15 18:29 /proyecto_latam/raw/bts/On_Time_Reporting_Carrier_On_Time_Performance_(1987_present)_2026_1.csv
+-rw-r--r--   1 max supergroup    221.6 M 2026-10-15 18:29 /proyecto_latam/raw/bts/On_Time_Reporting_Carrier_On_Time_Performance_(1987_present)_2026_2.csv
+-rw-r--r--   1 max supergroup    263.8 M 2026-10-15 18:29 /proyecto_latam/raw/bts/On_Time_Reporting_Carrier_On_Time_Performance_(1987_present)_2026_3.csv
+-rw-r--r--   1 max supergroup    257.9 M 2026-10-15 18:29 /proyecto_latam/raw/bts/On_Time_Reporting_Carrier_On_Time_Performance_(1987_present)_2026_4.csv
+-rw-r--r--   1 max supergroup    264.0 M 2026-10-15 18:29 /proyecto_latam/raw/bts/On_Time_Reporting_Carrier_On_Time_Performance_(1987_present)_2026_5.csv
+-rw-r--r--   1 max supergroup    262.5 M 2026-10-15 18:29 /proyecto_latam/raw/bts/On_Time_Reporting_Carrier_On_Time_Performance_(1987_present)_2026_6.csv
+-rw-r--r--   1 max supergroup    273.0 M 2026-10-15 18:29 /proyecto_latam/raw/bts/On_Time_Reporting_Carrier_On_Time_Performance_(1987_present)_2026_7.csv
+
+Archivos NOAA:
+Found 9 items
+-rw-r--r--   1 max supergroup     26.8 M 2026-10-15 18:29 /proyecto_latam/raw/noaa/GHCNh_USW00003017_2026.psv
+-rw-r--r--   1 max supergroup     22.1 M 2026-10-15 18:29 /proyecto_latam/raw/noaa/GHCNh_USW00003927_2026.psv
+-rw-r--r--   1 max supergroup     23.8 M 2026-10-15 18:29 /proyecto_latam/raw/noaa/GHCNh_USW00012815_2026.psv
+-rw-r--r--   1 max supergroup     25.0 M 2026-10-15 18:29 /proyecto_latam/raw/noaa/GHCNh_USW00013874_2026.psv
+-rw-r--r--   1 max supergroup     24.8 M 2026-10-15 18:29 /proyecto_latam/raw/noaa/GHCNh_USW00013881_2026.psv
+-rw-r--r--   1 max supergroup     23.2 M 2026-10-15 18:29 /proyecto_latam/raw/noaa/GHCNh_USW00023169_2026.psv
+-rw-r--r--   1 max supergroup     19.0 M 2026-10-15 18:29 /proyecto_latam/raw/noaa/GHCNh_USW00023174_2026.psv
+-rw-r--r--   1 max supergroup     19.9 M 2026-10-15 18:29 /proyecto_latam/raw/noaa/GHCNh_USW00023183_2026.psv
+-rw-r--r--   1 max supergroup     26.2 M 2026-10-15 18:29 /proyecto_latam/raw/noaa/GHCNh_USW00024233_2026.psv
+
+Uso de almacenamiento:
+1.7 G    1.7 G    /proyecto_latam/raw/bts
+210.6 M  210.6 M  /proyecto_latam/raw/noaa

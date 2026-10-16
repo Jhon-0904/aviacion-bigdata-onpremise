@@ -1,0 +1,29 @@
+PRUEBA EXITOSA DE SPARK SOBRE YARN
+Thu Oct 15 06:19:50 PM UTC 2026
+
+Procesos activos:
+94849 DataNode
+95296 ResourceManager
+100647 Jps
+95080 SecondaryNameNode
+95642 NodeManager
+94669 NameNode
+
+Aplicaciones YARN:
+WARNING: YARN_CONF_DIR has been replaced by HADOOP_CONF_DIR. Using value of YARN_CONF_DIR.
+2026-10-15 18:19:50,577 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2026-10-15 18:19:50,604 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at localhost/127.0.0.1:8032
+Total number of applications (application-types: [], states: [SUBMITTED, ACCEPTED, RUNNING] and tags: []):0
+                Application-Id	    Application-Name	    Application-Type	      User	     Queue	             State	       Final-State	       Progress	                       Tracking-URL
+
+Eventos Spark en HDFS:
+2026-10-15 18:19:50,980 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+drwxrwx---   - max supergroup          0 2026-10-15 18:16 /proyecto_latam/outputs/spark-events/eventlog_v2_application_1792087205091_0001
+-rw-rw----   1 max supergroup          0 2026-10-15 18:16 /proyecto_latam/outputs/spark-events/eventlog_v2_application_1792087205091_0001/appstatus_application_1792087205091_0001
+-rw-rw----   1 max supergroup      53593 2026-10-15 18:16 /proyecto_latam/outputs/spark-events/eventlog_v2_application_1792087205091_0001/events_1_application_1792087205091_0001.zstd
+drwxrwx---   - max supergroup          0 2026-10-15 18:17 /proyecto_latam/outputs/spark-events/eventlog_v2_application_1792087205091_0002
+-rw-rw----   1 max supergroup          0 2026-10-15 18:17 /proyecto_latam/outputs/spark-events/eventlog_v2_application_1792087205091_0002/appstatus_application_1792087205091_0002
+-rw-rw----   1 max supergroup      53618 2026-10-15 18:17 /proyecto_latam/outputs/spark-events/eventlog_v2_application_1792087205091_0002/events_1_application_1792087205091_0002.zstd
+drwxrwx---   - max supergroup          0 2026-10-15 18:18 /proyecto_latam/outputs/spark-events/eventlog_v2_application_1792087205091_0003
+-rw-rw----   1 max supergroup          0 2026-10-15 18:18 /proyecto_latam/outputs/spark-events/eventlog_v2_application_1792087205091_0003/appstatus_application_1792087205091_0003
+-rw-rw----   1 max supergroup      53571 2026-10-15 18:18 /proyecto_latam/outputs/spark-events/eventlog_v2_application_1792087205091_0003/events_1_application_1792087205091_0003.zstd
